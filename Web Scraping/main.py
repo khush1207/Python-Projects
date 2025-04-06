@@ -12,7 +12,7 @@ movie_text = [text.getText() for text in soup.find_all(name="h3", class_="title"
 movie_text.reverse()
 print(movie_text)
 
-#Create a blanck movies.txt file to store the extracted data
+#Create a blank movies.txt file to store the extracted data
 with open("movies.txt", mode="w", encoding="UTF-8") as file:
     for movie in movie_text:
         file.write(f"{movie}\n")
